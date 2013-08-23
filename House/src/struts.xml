@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+  <constant name="struts.i18n.encoding" value="UTF-8" /> 
+  <constant name="struts.i18n.reload" value="true" /> 
+  <constant name="struts.devMode" value="false" /> 
+  <constant name="struts.configuration.xml.reload" value="false" /> 
+  <constant name="struts.serve.static" value="true" /> 
+  <constant name="struts.serve.static.browserCache" value="false" />
+  
+	<package name="default" namespace="/" extends="struts-default">
+      
+		<default-action-ref name="pagenotfound"></default-action-ref>  
+		<action name="pagenotfound">  
+				<result>/resourceNotFound.html</result>  
+		</action> 
+		<action name="load" class="houseAction" method="getHouses">
+			<result name="success">/index.jsp</result>
+		</action>
+		  
+	</package>
+	
+</struts>
