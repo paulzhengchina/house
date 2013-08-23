@@ -8,13 +8,10 @@
     <filter-name>struts-cleanup</filter-name>
     <filter-class>org.apache.struts2.dispatcher.ActionContextCleanUp</filter-class>
   </filter>
-  
-  
   <filter>
     <filter-name>struts2</filter-name>
     <filter-class>org.apache.struts2.dispatcher.FilterDispatcher</filter-class>
   </filter>
-  
   <filter-mapping>
     <filter-name>struts-cleanup</filter-name>
     <url-pattern>/*</url-pattern>
@@ -22,14 +19,14 @@
   <filter-mapping>
     <filter-name>struts2</filter-name>
     <url-pattern>/*</url-pattern>
-     <dispatcher>REQUEST</dispatcher>        
-     <dispatcher>INCLUDE</dispatcher>   
-     <dispatcher>FORWARD</dispatcher>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
   </filter-mapping>
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>
-			/WEB-INF/classes/applicationContext-struts.xml
+			/WEB-INF/classes/applicationContex*.xml
 		</param-value>
   </context-param>
   <listener>

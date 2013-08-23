@@ -1,4 +1,7 @@
+
 package com.createdevelopment.house.entity;
+
+import java.util.Date;
 
 public class House {
 	private String id;
@@ -9,6 +12,7 @@ public class House {
 	private String description;
 	private String longitude;
 	private String latitude;
+	private Date deliver_time;
 
 	public String getName() {
 		return name;
@@ -73,5 +77,15 @@ public class House {
 	public void setId(String id) {
 		this.id = id;
 	}
+
+	public Date getDeliver_time() {
+		return deliver_time;
+	}
+
+	public void setDeliver_time(Date deliver_time) {
+		this.deliver_time = deliver_time;
+	}
+	
+	
 
 }
