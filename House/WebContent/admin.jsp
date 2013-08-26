@@ -10,7 +10,7 @@
 <body>
 	<div class="navbar">
 		  <div class="navbar-inner">
-		     <a class="brand" href="/">首页</a>
+		     <a class="brand" href="${pageContext.request.contextPath}/">首页</a>
 		     <ul class="nav nav-pills">
               <li class="active"><a href="house/showAllHouses.action">楼盘信息管理</a></li>        
             </ul>		  

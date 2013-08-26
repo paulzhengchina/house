@@ -14,6 +14,7 @@
 		     <ul class="nav nav-pills">
               <li class="active"><a href="#">楼市地图</a></li>
               <li><a href="#contact">联系我们</a></li>
+              <a class="brand" href="${pageContext.request.contextPath}/admin.jsp">后台管理</a>
               <form class="navbar-form pull-right form-search">
 	              <input class="input-medium search-query" type="text" placeholder="楼盘名称">
 	              <button type="submit" class="btn">Search</button>
