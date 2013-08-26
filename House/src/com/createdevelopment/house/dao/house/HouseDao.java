@@ -8,4 +8,6 @@ public interface HouseDao {
 
 	public List<House> getAllHouses();
 
+	public void saveHouse(House house);
+
 }

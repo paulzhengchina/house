@@ -17,4 +17,10 @@ public class HouseDaoImpl extends BaseDaoImpl implements HouseDao{
 	    return houses;
 	}
 
+	@Override
+	public void saveHouse(House house) {
+		// TODO Auto-generated method stub
+		this.getHibernateTemplate().save(house);
+	}
+
 }

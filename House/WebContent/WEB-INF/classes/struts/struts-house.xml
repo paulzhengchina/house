@@ -6,13 +6,17 @@
 
 <struts>
 	<package name="house" extends="struts-default" namespace="/house">
-	    	                 		
+	    
+	    <action name="saveHouse" class="houseAction" method="saveHouse">
+			<result name="success" type="redirect">showAllHouses.action</result>
+		</action>	                 		
 		<action name="showAllHouses" class="houseAction" method="showAllHouses">
 			<result name="success">/WEB-INF/page/house/showAllHousesForAdmin.jsp</result>
 		</action>
 		<action name="showAddHouse" class="houseAction" method="showAddHouse">
 			<result name="success">/WEB-INF/page/house/showAddHouse.jsp</result>
 		</action>
+		
 		
 	</package>
 </struts>	

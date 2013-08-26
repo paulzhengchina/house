@@ -7,12 +7,14 @@ public class House {
 	private String id;
 	private String name;
 	private String address;
-	private float average_price;
+	private int average_price;
 	private String builder;
 	private String description;
 	private String longitude;
 	private String latitude;
 	private Date deliver_time;
+	private Picture over_view;
+	private Picture logo;
 
 	public String getName() {
 		return name;
@@ -30,11 +32,11 @@ public class House {
 		this.address = address;
 	}
 
-	public float getAverage_price() {
+	public int getAverage_price() {
 		return average_price;
 	}
 
-	public void setAverage_price(float average_price) {
+	public void setAverage_price(int average_price) {
 		this.average_price = average_price;
 	}
 
@@ -84,6 +86,22 @@ public class House {
 
 	public void setDeliver_time(Date deliver_time) {
 		this.deliver_time = deliver_time;
+	}
+
+	public Picture getOver_view() {
+		return over_view;
+	}
+
+	public void setOver_view(Picture over_view) {
+		this.over_view = over_view;
+	}
+
+	public Picture getLogo() {
+		return logo;
+	}
+
+	public void setLogo(Picture logo) {
+		this.logo = logo;
 	}
 	
 	

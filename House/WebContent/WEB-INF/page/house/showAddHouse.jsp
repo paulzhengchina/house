@@ -1,7 +1,9 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Unicorn Admin</title>
+<title>添加楼盘信息</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet"
@@ -41,31 +43,24 @@
 					<div class="widget-title">
 						<span class="icon"> <i class="icon-align-justify"></i>
 						</span>
-						<h5>添加</h5>
+						<h5>添加楼盘信息</h5>
 					</div>
 					<div class="widget-content nopadding">
-						<s:form name="saveProduct" action="saveProduct" method="POST" theme="bootstrap"
-							class="form-horizontal" />
+						<s:form name="saveHouse" action="saveHouse" method="POST" theme="bootstrap" enctype="multipart/form-data" cssClass="form-horizontal" >
 
-						<div class="control-group">
-							<label class="control-label">Date picker</label>
-							<div class="controls">
-								
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label">File upload input</label>
-							<div class="controls">
-								<input type="file" />
-							</div>
-						</div>
+						<s:textfield  label="楼盘名称"  name="house.name"/>
+						<s:textfield  label="楼盘地址"  name="house.address"/>
+						<s:textfield  label="楼盘均价"  name="house.average_price"/>
+						<s:file label="上传Logo" name="logo" />
+						<s:file label="上传概览图" name="over_view" />
+						<s:submit cssClass="btn btn-primary"></s:submit>
 						</s:form>
 					</div>
 				</div>
 			</div>
 
 
-			<div class="row-fluid">
+			<div class="row-fluid">	
 				<div id="footer" class="span12">2013 &copy; 创展科技</div>
 			</div>
 		</div>

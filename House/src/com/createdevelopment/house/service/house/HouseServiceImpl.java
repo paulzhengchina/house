@@ -18,6 +18,11 @@ public class HouseServiceImpl implements HouseService {
 	public void setHouseDao(HouseDao houseDao) {
 		this.houseDao = houseDao;
 	}
+	@Override
+	public void saveHouse(House house) {
+		// TODO Auto-generated method stub
+		houseDao.saveHouse(house);
+	}
 	
 	
 

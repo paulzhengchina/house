@@ -20,6 +20,7 @@ import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
+import org.eclipse.jdt.internal.compiler.ast.ThisReference;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -33,7 +34,7 @@ public class BaseAction extends ActionSupport implements MethodInterceptor{
 	// public Pager pager;
 	 public final static String USER="CRNTUSER";
      private static int BUFFER_SIZE=16*1024;
-	 
+     
      public HttpServletRequest getRequest(){
     	 
     	return  ServletActionContext.getRequest();

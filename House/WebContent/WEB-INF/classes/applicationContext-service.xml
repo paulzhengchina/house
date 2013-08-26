@@ -8,5 +8,9 @@
 		<property name="houseDao" ref="houseDao" />
 	</bean>
 	
+	<bean id="pictureService" class="com.createdevelopment.house.service.picture.PictureServiceImpl">		
+		<property name="pictureDao" ref="pictureDao" />
+	</bean>
+	
 	
 </beans>

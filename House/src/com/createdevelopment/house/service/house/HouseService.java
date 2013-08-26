@@ -8,4 +8,6 @@ public interface HouseService {
 
 	List<House> getAllHouses();
 
+	void saveHouse(House house);
+
 }

@@ -16,7 +16,7 @@
 			<a class="brand" href="#">首页</a>
 			<ul class="nav nav-pills">
 				<li class="active"><a href="house/showAllHouses.action">楼盘信息管理</a></li>
-				<li ><a href="house/showAddHouse.action">添加楼盘信息管理</a></li>
+				<li ><a href="showAddHouse.action">添加楼盘信息管理</a></li>
 			</ul>
 		</div>
 	</div>
