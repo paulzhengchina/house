@@ -24,7 +24,6 @@ public class HouseAction extends BaseAction {
 	private String testString;
 	
 	public String showAllHouses(){
-		testString="test";
 		houses=houseService.getAllHouses();
 		return SUCCESS;
 	}
