@@ -34,11 +34,11 @@
 		<div id="sidebar">
 			<a href="#" class="visible-phone"><i class="icon icon-home"></i> 暂无</a>
 			<ul>
-			    <li class="active"><a href="#"><i class="icon icon-home"></i> <span>欢迎</span></a></li>
-				<li class="submenu">
+			    <li><a href="#"><i class="icon icon-home"></i> <span>欢迎</span></a></li>
+				<li class="submenu active open">
 					<a href="#"><i class="icon icon-th-list"></i> <span>楼盘信息管理</span> <span class="label">2</span></a>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/house/showAllHouses.action">楼盘列表</a></li>
+						<li class="active"><a href="${pageContext.request.contextPath}/house/showAllHouses.action">楼盘列表</a></li>
 						<li><a href="${pageContext.request.contextPath}/house/showAddHouse.action">新增楼盘</a></li>
 					</ul>
 				</li>	
