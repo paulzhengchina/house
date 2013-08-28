@@ -35,17 +35,17 @@
 			<a href="#" class="visible-phone"><i class="icon icon-home"></i> 暂无</a>
 			<ul>
 			    <li><a href="#"><i class="icon icon-home"></i> <span>欢迎</span></a></li>
-			    <li class="submenu">
+			    <li class="submenu active open">
 					<a href="#"><i class="icon icon-th-list"></i> <span>类型设置</span> <span class="label">2</span></a>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/type/showAllTypes.action">类型列表</a></li>
+						<li class="active"><a href="${pageContext.request.contextPath}/type/showAllTypes.action">类型列表</a></li>
 						<li><a href="${pageContext.request.contextPath}/type/showAddType.action">新增类型</a></li>
 					</ul>
 				</li>	
-				<li class="submenu active open">
+				<li>
 					<a href="#"><i class="icon icon-th-list"></i> <span>楼盘信息管理</span> <span class="label">2</span></a>
 					<ul>
-						<li class="active"><a href="${pageContext.request.contextPath}/house/showAllHouses.action">楼盘列表</a></li>
+						<li><a href="${pageContext.request.contextPath}/house/showAllHouses.action">楼盘列表</a></li>
 						<li><a href="${pageContext.request.contextPath}/house/showAddHouse.action">新增楼盘</a></li>
 					</ul>
 				</li>	
@@ -77,7 +77,7 @@
 			</div>
 			<div id="breadcrumb">
 				<a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> 后台管理</a>
-				<a href="#" class="current">欢迎</a>
+				<a href="#" class="current">类型管理</a>
 			</div>
 			<div class="container-fluid">
 			<div class="row-fluid">
@@ -96,18 +96,15 @@
 										<tr>
 											<th><div class="checker" id="uniform-title-table-checkbox"><span><input type="checkbox" id="title-table-checkbox" name="title-table-checkbox" style="opacity: 0;"></span></div></th>
 											<th>名称</th>
-											<th>位置</th>
-											<th>均价</th>
 										</tr>
 									</thead>
 									<tbody>
-									    <s:iterator value="houses" var="house">
+									    <s:iterator value="types" var="type">
 									  		<tr>
 												<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" style="opacity: 0;"></span></div></td>
 												<td><s:property value="name"/></td>
-												<td><s:property value="address"/></td>
-												<td>￥<s:property value="average_price"/></td>
-										</tr>
+												<td><s:iterator value="%{#type.values}" var="val"><s:property value="%{#val.value}"/>/&nbsp;&nbsp;&nbsp;</s:iterator>
+										    </tr>
 		                                </s:iterator>
 										
 									</tbody>

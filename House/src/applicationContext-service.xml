@@ -12,5 +12,13 @@
 		<property name="pictureDao" ref="pictureDao" />
 	</bean>
 	
+	<bean id="typeService" class="com.createdevelopment.house.service.type.TypeServiceImpl">		
+		<property name="typeDao" ref="typeDao" />
+	</bean>
+	
+	<bean id="roomTypeService" class="com.createdevelopment.house.service.roomtype.RoomTypeServiceImpl">		
+		<property name="roomTypeDao" ref="roomTypeDao" />
+	</bean>
+	
 	
 </beans>
