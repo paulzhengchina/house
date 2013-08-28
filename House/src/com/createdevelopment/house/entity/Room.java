@@ -2,7 +2,7 @@ package com.createdevelopment.house.entity;
 
 public class Room {
 	private Picture roomImage;
-	private RoomType roomType;
+	private TypeValue roomType;
 	private String description;
 	private House belongedHouse;
 
@@ -14,11 +14,11 @@ public class Room {
 		this.roomImage = roomImage;
 	}
 
-	public RoomType getRoomType() {
+	public TypeValue getRoomType() {
 		return roomType;
 	}
 
-	public void setRoomType(RoomType roomType) {
+	public void setRoomType(TypeValue roomType) {
 		this.roomType = roomType;
 	}
 

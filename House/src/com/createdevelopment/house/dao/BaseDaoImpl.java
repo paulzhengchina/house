@@ -6,6 +6,8 @@ import org.hibernate.Query;
 import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
+import com.createdevelopment.house.entity.Picture;
+
 
 
 public class BaseDaoImpl extends HibernateDaoSupport implements BaseDao{
@@ -43,23 +45,14 @@ public class BaseDaoImpl extends HibernateDaoSupport implements BaseDao{
 			return 0;
 	}
 	
-//	public List findResultForPager(String hql,Pager pager){
-//		
-//	    Query query=this.getSession().createQuery(hql);
-//	    query.setFirstResult(pager.getCurrentPage()*pager.getNumForEachPage());
-//	    query.setMaxResults(pager.getNumForEachPage());
-//		return query.list();
-//		}
-//	
-//public List findResultForPager(DetachedCriteria detachedCriteria,Pager pager){
-//		
-//		return this.getHibernateTemplate().findByCriteria(detachedCriteria, pager.getCurrentPage()*pager.getNumForEachPage(), pager.getNumForEachPage());
-//	   
-//		}
-//
-//public List findResultForPager(Object obj,Pager pager){
-//	
-//	return this.getHibernateTemplate().findByExample(obj, pager.getCurrentPage()*pager.getNumForEachPage(), pager.getNumForEachPage());
-//   
-//	}
+	public Object saveEntityWithReturnedObjection(Object entity) {
+		// TODO Auto-generated method stub
+		try {
+			getHibernateTemplate().save(entity);
+			getHibernateTemplate().flush();
+			return entity;
+		} catch (Exception ex) {
+			throw new RuntimeException(ex.getMessage());
+		}
+	}
 }

@@ -6,7 +6,7 @@
 		<title>后台管理</title>
 		<meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet"
+<link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/bootstrap-responsive.min.css" />
@@ -45,8 +45,8 @@
 				<li class="submenu active open">
 					<a href="#"><i class="icon icon-th-list"></i> <span>楼盘信息管理</span> <span class="label">2</span></a>
 					<ul>
-						<li class="active"><a href="${pageContext.request.contextPath}/house/showAllHouses.action">楼盘列表</a></li>
-						<li><a href="${pageContext.request.contextPath}/house/showAddHouse.action">新增楼盘</a></li>
+						<li><a href="${pageContext.request.contextPath}/house/showAllHouses.action">楼盘列表</a></li>
+						<li class="active"><a href="${pageContext.request.contextPath}/house/showAddHouse.action">新增楼盘</a></li>
 					</ul>
 				</li>	
 				<li class="submenu">
@@ -77,44 +77,29 @@
 			</div>
 			<div id="breadcrumb">
 				<a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> 后台管理</a>
-				<a href="#" class="current">欢迎</a>
+				<a href="#" class="current">新增类型</a>
 			</div>
 			<div class="container-fluid">
-			<div class="row-fluid">
+				<div class="row-fluid">
 			<div class="span12">
 				<div class="widget-box">
-							<div class="widget-title">
-								<span class="icon">
-									<i class="icon-th"></i>
-								</span>
-								<h5>楼盘列表</h5>
-								<span class="label label-info"></span>
-							</div>
-							<div class="widget-content">
-								<table class="table table-bordered table-striped with-check">
-									<thead>
-										<tr>
-											<th><div class="checker" id="uniform-title-table-checkbox"><span><input type="checkbox" id="title-table-checkbox" name="title-table-checkbox" style="opacity: 0;"></span></div></th>
-											<th>名称</th>
-											<th>位置</th>
-											<th>均价</th>
-										</tr>
-									</thead>
-									<tbody>
-									    <s:iterator value="houses" var="house">
-									  		<tr>
-												<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" style="opacity: 0;"></span></div></td>
-												<td><s:property value="name"/></td>
-												<td><s:property value="address"/></td>
-												<td>￥<s:property value="average_price"/></td>
-										</tr>
-		                                </s:iterator>
-										
-									</tbody>
-								</table>							
-							</div>
-						</div>
+					<div class="widget-title">
+						<span class="icon"> <i class="icon-align-justify"></i>
+						</span>
+						<h5>添加新类型</h5>
+					</div>
+					<div class="widget-content nopadding">
+						<s:form name="saveType" action="saveType" method="POST" theme="bootstrap" enctype="multipart/form-data" cssClass="form-horizontal" >
+
+						<s:textfield  label="类型名称"  name="type.name" />
+						<s:textfield  label="类型值"  name="valuesstring" placeholder="输入值请以（，）隔开"/>
+						
+						<s:submit cssClass="btn btn-primary"></s:submit>
+						</s:form>
+					</div>
 				</div>
+			</div>
+			
 				<div class="row-fluid">
 					<div id="footer" class="span12">
 						2013 &copy; 创展科技</a>
@@ -124,23 +109,23 @@
 		</div>
 		
 
-            <script src="${pageContext.request.contextPath}/js/excanvas.min.js"></script>
-            <script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-            <script src="${pageContext.request.contextPath}/js/jquery.ui.custom.js"></script>
-            <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-            <script src="${pageContext.request.contextPath}/js/jquery.flot.min.js"></script>
-            <script src="${pageContext.request.contextPath}/js/jquery.flot.resize.min.js"></script>
-            <script src="${pageContext.request.contextPath}/js/jquery.peity.min.js"></script>
-            <script src="${pageContext.request.contextPath}/js/fullcalendar.min.js"></script>
-            <script src="${pageContext.request.contextPath}/js/unicorn.js"></script>
-            <script src="${pageContext.request.contextPath}/js/jquery.uniform.js"></script>
-            <script type="text/javascript">
-	            $(document).ready(function(){          	         	
-	            	$('input[type=checkbox]').uniform();
-	            });
-            </script>
-           
-            
+           <script
+		src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+            <script
+		src="${pageContext.request.contextPath}/js/jquery.ui.custom.js"></script>
+            <script
+		src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+            <script
+		src="${pageContext.request.contextPath}/js/bootstrap-colorpicker.js"></script>
+            <script
+		src="${pageContext.request.contextPath}/js/bootstrap-datepicker.js"></script>
+            <script
+		src="${pageContext.request.contextPath}/js/jquery.uniform.js"></script>
+            <script
+		src="${pageContext.request.contextPath}/js/select2.min.js"></script>
+            <script
+		src="${pageContext.request.contextPath}/js/unicorn.js"></script>
+            <script
+		src="${pageContext.request.contextPath}/js/unicorn.form_common.js"></script>
 	</body>
 </html>
-

@@ -12,5 +12,9 @@
 		<property name="pictureDao" ref="pictureDao" />
 	</bean>
 	
+	<bean id="typeService" class="com.createdevelopment.house.service.type.TypeServiceImpl">		
+		<property name="typeDao" ref="typeDao" />
+	</bean>
+	
 	
 </beans>

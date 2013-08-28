@@ -40,5 +40,6 @@ http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 	
     <bean name="houseDao" class="com.createdevelopment.house.dao.house.HouseDaoImpl" parent="baseDao"></bean>
     <bean name="pictureDao" class="com.createdevelopment.house.dao.picture.PictureDaoImpl" parent="baseDao"></bean>
+    <bean name="typeDao" class="com.createdevelopment.house.dao.type.TypeDaoImpl" parent="baseDao"></bean>
 	
 </beans>

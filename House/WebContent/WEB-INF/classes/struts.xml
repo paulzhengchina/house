@@ -11,7 +11,8 @@
   <constant name="struts.serve.static" value="true" /> 
   <constant name="struts.serve.static.browserCache" value="false" />
   
-  <include file="struts/struts-house.xml" /> 
+  <include file="struts/struts-house.xml" />
+  <include file="struts/struts-type.xml" /> 
   <package name="default" namespace="/" extends="struts-default">
       
 		<default-action-ref name="pagenotfound"></default-action-ref>  

@@ -12,5 +12,9 @@
        <property name="pictureService" ref="pictureService" />       	    
 	</bean>
 	
+	<bean id="typeAction" class="com.createdevelopment.house.action.TypeAction" scope="prototype" parent="baseAction">
+       <property name="typeService" ref="typeService" />       	    
+	</bean>
+	
 
 </beans>

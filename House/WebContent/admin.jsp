@@ -21,6 +21,13 @@
 			<a href="#" class="visible-phone"><i class="icon icon-home"></i> 暂无</a>
 			<ul>
 			    <li class="active"><a href="#"><i class="icon icon-home"></i> <span>欢迎</span></a></li>
+			    <li class="submenu">
+					<a href="#"><i class="icon icon-th-list"></i> <span>类型设置</span> <span class="label">2</span></a>
+					<ul>
+						<li><a href="${pageContext.request.contextPath}/type/showAllTypes.action">类型列表</a></li>
+						<li><a href="${pageContext.request.contextPath}/type/showAddType.action">新增类型</a></li>
+					</ul>
+				</li>	
 				<li class="submenu">
 					<a href="#"><i class="icon icon-th-list"></i> <span>楼盘信息管理</span> <span class="label">2</span></a>
 					<ul>
