@@ -103,6 +103,7 @@
 									  		<tr>
 												<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" style="opacity: 0;"></span></div></td>
 												<td><s:property value="name"/></td>
+												<td><s:iterator value="%{#type.values}" var="val"><s:property value="%{#val.value}"/>/&nbsp;&nbsp;&nbsp;</s:iterator>
 										    </tr>
 		                                </s:iterator>
 										

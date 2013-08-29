@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+    <class name="com.createdevelopment.house.entity.RoomType" table="room_type">
+        <id name="id" type="java.lang.String">
+            <column name="id" length="36" />
+            <generator class="uuid" />
+        </id>
+       
+        <property name="name" type="java.lang.String">
+            <column name="name"  />
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="description"  />
+        </property>
+        <many-to-one name="roomTypeImage" class="com.createdevelopment.house.entity.Picture" lazy="false">
+           <column name="room_type_image"></column>
+        </many-to-one>   
+        <many-to-one name="category" class="com.createdevelopment.house.entity.TypeValue" lazy="false">
+           <column name="category_id"></column>
+        </many-to-one>       
+        <many-to-one name="belongedHouse" class="com.createdevelopment.house.entity.House" lazy="false">
+           <column name="house_id"></column>
+        </many-to-one>
+       
+    </class>
+</hibernate-mapping>

@@ -13,6 +13,7 @@
   
   <include file="struts/struts-house.xml" />
   <include file="struts/struts-type.xml" /> 
+  <include file="struts/struts-roomtype.xml" /> 
   <package name="default" namespace="/" extends="struts-default">
       
 		<default-action-ref name="pagenotfound"></default-action-ref>  

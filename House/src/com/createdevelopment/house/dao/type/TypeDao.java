@@ -13,4 +13,6 @@ public interface TypeDao {
 
 	public void saveTypeValue(TypeValue value);
 
+	public List<TypeValue> obtainTypeValuesByName(String typeName);
+
 }

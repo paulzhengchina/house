@@ -16,5 +16,11 @@
        <property name="typeService" ref="typeService" />       	    
 	</bean>
 	
+	<bean id="roomTypeAction" class="com.createdevelopment.house.action.RoomTypeAction" scope="prototype" parent="baseAction">
+       <property name="roomTypeService" ref="roomTypeService" /> 
+       <property name="typeService" ref="typeService" /> 
+       <property name="pictureService" ref="pictureService" />      	    
+	</bean>
+	
 
 </beans>

@@ -15,7 +15,6 @@ public class HouseAction extends BaseAction {
 	PictureService pictureService;
 	House house;
     private File logo;
-    private String logoContentType;
 	private String logoFileName;
     private File over_view;
     private String over_viewContentType;
@@ -77,15 +76,6 @@ public class HouseAction extends BaseAction {
 
 	public void setLogo(File logo) {
 		this.logo = logo;
-	}
-
-
-	public String getLogoContentType() {
-		return logoContentType;
-	}
-
-	public void setLogoContentType(String logoContentType) {
-		this.logoContentType = logoContentType;
 	}
 
 	public String getLogoFileName() {
