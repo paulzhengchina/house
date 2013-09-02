@@ -12,7 +12,7 @@
 			<result name="success">/WEB-INF/page/roomtype/manageroomtype.jsp</result>
 		</action>	                 		
 		<action name="manageroomtype" class="roomTypeAction" method="obtainAllRoomTypesForHouse">
-			<result name="success">/WEB-INF/page/roomtype/manageroomtype.jsp</result>
+			<result name="success">/WEB-INF/page/roomtype/manageroomtypes.jsp</result>
 		</action>
 		<action name="saveroomtype" class="roomTypeAction" method="saveRoomType">
 			<result name="success" type="redirect">gotomanageroomtype.action?belongedHouseId=%{belongedHouseId}</result>

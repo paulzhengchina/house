@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>后台管理</title>
+		<meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
@@ -50,13 +50,6 @@
 					</ul>
 				</li>	
 				<li class="submenu">
-					<a href="#"><i class="icon icon-file"></i> <span>户型管理</span> <span class="label">2</span></a>
-					<ul>
-						<li><a href="invoice.html">户型列表</a></li>
-						<li><a href="chat.html">新增户型</a></li>
-					</ul>
-				</li>
-				<li class="submenu">
 					<a href="#"><i class="icon icon-file"></i> <span>公共资源管理管理</span> <span class="label">2</span></a>
 					<ul>
 						<li><a href="invoice.html">公共资源列表</a></li>
@@ -77,8 +70,7 @@
 			</div>
 			<div id="breadcrumb">
 				<a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> 后台管理</a>
-				<a href="#" class="tip-bottom">楼盘信息管理</a>
-				<a href="#" class="current">楼盘名称</a>
+				<a href="#" class="current">欢迎</a>
 			</div>
 			<div class="container-fluid">
 			<div class="row-fluid">
@@ -89,26 +81,7 @@
 									<i class="icon-th"></i>
 								</span>
 								<h5>楼盘列表</h5>
-								<span class="label label-info"><a href="#addRoomTypeModal" data-toggle="modal">新增户型</a></span>
-								<div id="addRoomTypeModal" class="modal hide">
-										<div class="modal-header">
-											<button data-dismiss="modal" class="close" type="button">×</button>
-											<h3>新增户型</h3>
-										</div>
-								<div class="modal-body">
-									<s:form name="saveroomtype" action="saveroomtype" method="POST"
-										theme="bootstrap" enctype="multipart/form-data"
-										cssClass="form-horizontal">
-                                        <s:hidden name="roomType.belongedHouse.id" value="%{belongedHouseId}"></s:hidden>
-										<s:textfield label="户型名称" name="roomType.name" />
-										<s:file label="户型图" name="image" />
-										<s:select label="户型类型"  list="categories"  name="roomType.category.id"    listKey="id" listValue="value"  headerKey="None"  headerValue="None"/>					
-										<s:textarea label="户型介绍" name="roomType.description"/>
-										<s:submit cssClass="btn btn-primary"></s:submit>
-									</s:form>
-								</div>
-							</div>
-								
+								<span class="label label-info"></span>
 							</div>
 							<div class="widget-content">
 								<table class="table table-bordered table-striped with-check">
@@ -116,20 +89,29 @@
 										<tr>
 											<th><div class="checker" id="uniform-title-table-checkbox"><span><input type="checkbox" id="title-table-checkbox" name="title-table-checkbox" style="opacity: 0;"></span></div></th>
 											<th>名称</th>
-											<th>户型图</th>
-											<th>描述</th>
+											<th>位置</th>
+											<th>均价</th>
 											<th>维护</th>
 										</tr>
 									</thead>
 									<tbody>
-									    <s:iterator value="roomTypes" var="roomType">
+									    <s:iterator value="houses" var="house">
 									  		<tr>
 												<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" style="opacity: 0;"></span></div></td>
-
 												<td><s:property value="name"/></td>
-												<td><img src="${pageContext.request.contextPath}/<s:property value='roomTypeImage.path'/>" class="img-rounded" width="150"/></td>
-												<td><s:property value="description"/></td>
-												
+												<td><s:property value="address"/></td>
+												<td>￥<s:property value="average_price"/></td>
+												<td>
+													<button class="btn btn-primary btn-mini">基本信息</button>
+													<a href='<s:url value="/roomtype/gotomanageroomtype.action"><s:param name="belongedHouseId" value="id"/></s:url>' >
+													  <button class="btn btn-primary btn-mini" id="roomtype">户型</button>
+													</a>
+													<a href='<s:url value="/house/gotomanagepictures.action"><s:param name="belongedHouseId" value="id"/></s:url>' >
+													  <button class="btn btn-primary btn-mini" id="roomtype">户型</button>
+													</a>
+													<button class="btn btn-primary btn-mini">周边</button>
+													
+												</td>
 										</tr>
 		                                </s:iterator>
 										
@@ -159,7 +141,7 @@
             <script src="${pageContext.request.contextPath}/js/jquery.uniform.js"></script>
             <script type="text/javascript">
 	            $(document).ready(function(){          	         	
-	            	$('input[type=file]').uniform();
+	            	$('input[type=checkbox]').uniform();
 	            });
             </script>
            
