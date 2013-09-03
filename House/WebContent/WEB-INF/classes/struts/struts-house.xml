@@ -16,6 +16,9 @@
 		<action name="showAddHouse" class="houseAction" method="showAddHouse">
 			<result name="success">/WEB-INF/page/house/showAddHouse.jsp</result>
 		</action>
+		<action name="gotomanagepictures" class="houseAction" method="loadPictures">
+			<result name="success">/WEB-INF/page/house/showAddHouse.jsp</result>
+		</action>
 		
 		
 	</package>

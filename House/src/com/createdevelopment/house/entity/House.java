@@ -2,6 +2,7 @@
 package com.createdevelopment.house.entity;
 
 import java.util.Date;
+import java.util.List;
 
 public class House {
 	private String id;
@@ -15,6 +16,7 @@ public class House {
 	private Date deliver_time;
 	private Picture over_view;
 	private Picture logo;
+	private List<Picture> pictures;
 
 	public String getName() {
 		return name;
@@ -102,6 +104,14 @@ public class House {
 
 	public void setLogo(Picture logo) {
 		this.logo = logo;
+	}
+
+	public List<Picture> getPictures() {
+		return pictures;
+	}
+
+	public void setPictures(List<Picture> pictures) {
+		this.pictures = pictures;
 	}
 	
 	

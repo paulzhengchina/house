@@ -107,7 +107,7 @@
 													  <button class="btn btn-primary btn-mini" id="roomtype">户型</button>
 													</a>
 													<a href='<s:url value="/house/gotomanagepictures.action"><s:param name="belongedHouseId" value="id"/></s:url>' >
-													  <button class="btn btn-primary btn-mini" id="roomtype">户型</button>
+													  <button class="btn btn-primary btn-mini" id="roomtype">图片</button>
 													</a>
 													<button class="btn btn-primary btn-mini">周边</button>
 													

@@ -15,4 +15,5 @@ public interface PictureDao extends BaseDao {
 
 	Picture savePicture(Picture picture);
 
+
 }

@@ -20,7 +20,9 @@ public class HouseAction extends BaseAction {
     private String over_viewContentType;
 	private String over_viewFileName;
 	private String realPathString;
-	private String testString;
+	private List<Picture> picturesOfHouse;
+	private String houseId;
+	
 	
 	public String showAllHouses(){
 		houses=houseService.getAllHouses();
@@ -42,6 +44,13 @@ public class HouseAction extends BaseAction {
     	house.setLogo(logoPicture);
     	house.setOver_view(over_viewPicture);
     	houseService.saveHouse(house);
+    	return SUCCESS;
+    }
+    
+    public String loadPictures(){
+    	house=new House();
+    	house.setId(houseId);
+    	picturesOfHouse=pictureService.findPicturesForHouse(house);
     	return SUCCESS;
     }
     
@@ -118,12 +127,20 @@ public class HouseAction extends BaseAction {
 		this.over_viewFileName = lover_viewFileName;
 	}
 
-	public String getTestString() {
-		return testString;
+	public String getOver_viewFileName() {
+		return over_viewFileName;
 	}
 
-	public void setTestString(String testString) {
-		this.testString = testString;
+	public void setOver_viewFileName(String over_viewFileName) {
+		this.over_viewFileName = over_viewFileName;
+	}
+
+	public List<Picture> getPicturesOfHouse() {
+		return picturesOfHouse;
+	}
+
+	public void setPicturesOfHouse(List<Picture> picturesOfHouse) {
+		this.picturesOfHouse = picturesOfHouse;
 	}
 	
     

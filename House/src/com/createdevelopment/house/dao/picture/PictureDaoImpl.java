@@ -51,4 +51,5 @@ public class PictureDaoImpl extends BaseDaoImpl implements PictureDao {
 		}
 	}
 
+	
 }
