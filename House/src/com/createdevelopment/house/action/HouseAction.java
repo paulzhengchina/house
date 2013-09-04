@@ -22,6 +22,7 @@ public class HouseAction extends BaseAction {
 	private String realPathString;
 	private List<Picture> picturesOfHouse;
 	private String houseId;
+
 	
 	
 	public String showAllHouses(){
@@ -141,6 +142,14 @@ public class HouseAction extends BaseAction {
 
 	public void setPicturesOfHouse(List<Picture> picturesOfHouse) {
 		this.picturesOfHouse = picturesOfHouse;
+	}
+
+	public String getHouseId() {
+		return houseId;
+	}
+
+	public void setHouseId(String houseId) {
+		this.houseId = houseId;
 	}
 	
     
