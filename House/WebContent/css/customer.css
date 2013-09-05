@@ -42,13 +42,24 @@ body {
 	background: #FFFFFF;
 	z-index: -1;
 }
+#sidebar.hided:after {left:-200px;}
+#sidebar.isCollapse:after {width: 37px;}
+.sidebar-wrapper {float: left;width: 100%;}
+#sidebar.isCollapse {width: 39px;}
+#sidebar.hided {
+	margin-left: -200px;
+}
 #content {
-	margin-left: 90px;
+	margin-left: 80px;
 	-webkit-transition: margin ease-in-out 0.1s;
  	-moz-transition: margin ease-in-out 0.1s;
    	-o-transition: margin ease-in-out 0.1s;
     transition: margin ease-in-out 0.1s;
 }
+#content.hided, #content.isCollapse.hided, #content.hided.isCollapse {margin-left: 0px;}
+#content.isCollapse {margin-left: 39px;}
+#content.offCanvas {margin-left: 80px; width: 100%; }
+#content .row-fluid {margin-bottom: 20px;}
 #content .wrapper {
 	float: left;
     margin-top: 40px;
@@ -307,6 +318,23 @@ body {
 .annoucement-area {
 	background: #999999;
     line-height: 100px;
+}
+#resBtn {
+	position:fixed;
+	top:50%;
+}
+.dragbar-btn {
+	background: #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+    border-bottom-right-radius: 5px;
+    border-right: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    border-top-right-radius: 5px;
+    box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.5);
+    padding: 30px 0;
+}
+.dragbar-btn:hover {
+	background: #f5f5f5;
 }
 
 @media only screen and (max-width: 1024px) {

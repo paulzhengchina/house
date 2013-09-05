@@ -103,6 +103,7 @@
             var navCurrent = nav.find('li.current');
             var navLink = nav.find('a');
             var navSub = nav.find('li>ul.sub');
+            var drawerBtn = $('#resBtn');
 
             //add more icon
             if(settings.navigation.useNavMore) {
@@ -182,6 +183,15 @@
                     }
 
                 }
+            });
+            drawerBtn.on("click", function(){
+            	var _this = $(this);
+            	if(_this.next("#content").hasClass('hided')) {
+            		_this.children().removeClass().addClass("icon16 i-arrow-right-3");
+            	} else {
+            		_this.children().removeClass().addClass("icon16 i-arrow-left-2");
+            	}
+            	
             });
 
 
@@ -563,12 +573,12 @@
 
         //create offcanvas menu button
         function resBtn () {
-            $('#header .nav-no-collapse').append('<a href="#" id="resBtn" class="btn btn-danger"><i class="icon16 i-menu-6"></i></a>');
+            $('#sidebar').after('<a href="#" id="resBtn" class="dragbar-btn"><i class="icon16 i-arrow-right-3"></i></a>');
             resBtnClick();
         }
         //destroy responsive button
         function resBtnDestroy () {
-            $('#header #resBtn').remove();
+            $('#resBtn').remove();
         }
 
         //hide sidbear and pull left content
@@ -660,13 +670,13 @@
 
         //execute independ functions
         fontFlicker();
+        respond();
         mainNav();
         setCurrentNav();
         collapseNav();
         widgetBox();
         checkAll();
         accordionIcon();
-        respond();
         last_child()
 
         //check for touch device
