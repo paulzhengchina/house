@@ -57,9 +57,9 @@ public class PictureServiceImpl implements PictureService{
 	}
 	
 	@Override
-	public List<Picture> findPicturesForHouse(House house) {
+	public List<Picture> findPicturesForOwner(String ownerId) {
 		// TODO Auto-generated method stub
-		return pictureDao.getPicturesForObject(house.getId());
+		return pictureDao.getPicturesForObject(ownerId);
 	}
 
 	public PictureDao getPictureDao() {

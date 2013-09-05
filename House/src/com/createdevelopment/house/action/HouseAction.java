@@ -48,12 +48,6 @@ public class HouseAction extends BaseAction {
     	return SUCCESS;
     }
     
-    public String loadPictures(){
-    	house=new House();
-    	house.setId(houseId);
-    	picturesOfHouse=pictureService.findPicturesForHouse(house);
-    	return SUCCESS;
-    }
     
     /*
      * set and get methods start from here

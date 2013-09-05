@@ -12,6 +12,6 @@ public interface PictureService {
 
 	Picture savePicture(Picture persitentPicture, File objectFile,String objectFileName, String realPath);
 
-	List<Picture> findPicturesForHouse(House house);
+	List<Picture> findPicturesForOwner(String ownerId);
 
 }

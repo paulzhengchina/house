@@ -77,9 +77,8 @@
 		</div>
 		<div id="breadcrumb">
 			<a href="#" title="Go to Home" class="tip-bottom"><i
-				class="icon-home"></i> 后台管理</a> 
-                <a href="#" class="tip-bottom">楼盘信息管理</a>
-				<a href="#" class="current">图片管理</a>
+				class="icon-home"></i> 后台管理</a> <a href="#" class="tip-bottom">楼盘信息管理</a>
+			<a href="#" class="current">图片管理</a>
 		</div>
 		<div class="container-fluid">
 			<div class="row-fluid">
@@ -100,9 +99,9 @@
 									<s:form name="savePicture" action="savePicture" method="POST"
 										theme="bootstrap" enctype="multipart/form-data"
 										cssClass="form-horizontal">
-										<s:hidden name="picture.ownerId" value="%{belongedHouseId}"></s:hidden>
-										<s:file label="上传图片" name="pictureFile" />
-										<s:textarea label="图片介绍" name="roomType.description" />
+										<s:hidden name="picture.ownerId" value="%{ownerId}"></s:hidden>
+										<s:file label="上传图片" name="image" />
+										<s:textarea label="图片介绍" name="picture.description" />
 										<s:submit cssClass="btn btn-primary"></s:submit>
 									</s:form>
 								</div>
@@ -124,7 +123,9 @@
 									</thead>
 									<tbody>
 										<s:iterator value="pictures" var="pic">
+
 											<tr>
+
 												<td><div class="checker" id="uniform-undefined">
 														<span><input type="checkbox" style="opacity: 0;"></span>
 													</div></td>
@@ -141,31 +142,31 @@
 							</div>
 						</div>
 					</div>
-					<div class="row-fluid">
-						<div id="footer" class="span12">
-							2013 &copy; 创展科技</a>
-						</div>
+				</div>
+				<div class="row-fluid">
+					<div id="footer" class="span12">
+						2013 &copy; 创展科技</a>
 					</div>
 				</div>
 			</div>
+		</div>
 
 
-			<script src="${pageContext.request.contextPath}/js/excanvas.min.js"></script>
-			<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-			<script
-				src="${pageContext.request.contextPath}/js/jquery.ui.custom.js"></script>
-			<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-			<script
-				src="${pageContext.request.contextPath}/js/jquery.flot.min.js"></script>
-			<script
-				src="${pageContext.request.contextPath}/js/jquery.flot.resize.min.js"></script>
-			<script
-				src="${pageContext.request.contextPath}/js/jquery.peity.min.js"></script>
-			<script
-				src="${pageContext.request.contextPath}/js/fullcalendar.min.js"></script>
-			<script src="${pageContext.request.contextPath}/js/unicorn.js"></script>
-			<script src="${pageContext.request.contextPath}/js/jquery.uniform.js"></script>
-			<script type="text/javascript">
+		<script src="${pageContext.request.contextPath}/js/excanvas.min.js"></script>
+		<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+		<script
+			src="${pageContext.request.contextPath}/js/jquery.ui.custom.js"></script>
+		<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+		<script src="${pageContext.request.contextPath}/js/jquery.flot.min.js"></script>
+		<script
+			src="${pageContext.request.contextPath}/js/jquery.flot.resize.min.js"></script>
+		<script
+			src="${pageContext.request.contextPath}/js/jquery.peity.min.js"></script>
+		<script
+			src="${pageContext.request.contextPath}/js/fullcalendar.min.js"></script>
+		<script src="${pageContext.request.contextPath}/js/unicorn.js"></script>
+		<script src="${pageContext.request.contextPath}/js/jquery.uniform.js"></script>
+		<script type="text/javascript">
 	            $(document).ready(function(){          	         	
 	            	$('input[type=checkbox]').uniform();
 	            	$('input[type=file]').uniform();

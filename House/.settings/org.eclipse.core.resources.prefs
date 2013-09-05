@@ -1,7 +1,7 @@
 eclipse.preferences.version=1
 encoding//WebContent/WEB-INF/page/house/managehouses.jsp=UTF-8
-encoding//WebContent/WEB-INF/page/house/managepictures.jsp=UTF-8
 encoding//WebContent/WEB-INF/page/house/showAddHouse.jsp=UTF-8
+encoding//WebContent/WEB-INF/page/picture/managepictures.jsp=UTF-8
 encoding//WebContent/WEB-INF/page/roomtype/manageroomtypes.jsp=UTF-8
 encoding//WebContent/WEB-INF/page/type/addType.jsp=UTF-8
 encoding//WebContent/WEB-INF/page/type/showAllTypesForAdmin.jsp=UTF-8
