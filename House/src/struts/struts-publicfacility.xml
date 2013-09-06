@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="publicfacility" extends="struts-default" namespace="/publicfacility">
+	    
+	    <action name="gotoManagePublicFacilities" class="publicFacilityAction" method="loadManagingPublicFacilities">
+			<result name="success">/WEB-INF/page/publicfacility/managepublicfacilities.jsp</result>
+		</action>	                 		
+		
+	</package>
+</struts>	

@@ -52,7 +52,7 @@
 				<li class="submenu">
 					<a href="#"><i class="icon icon-file"></i> <span>公共资源管理管理</span> <span class="label">2</span></a>
 					<ul>
-						<li><a href="invoice.html">公共资源列表</a></li>
+						<li><a href="${pageContext.request.contextPath}/publicfacility/gotoManagePublicFacilities.action">公共资源列表</a></li>
 						<li><a href="chat.html">新增公共资源</a></li>
 					</ul>
 				</li>

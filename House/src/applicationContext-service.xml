@@ -20,5 +20,9 @@
 		<property name="roomTypeDao" ref="roomTypeDao" />
 	</bean>
 	
+	<bean id="publicFacilityService" class="com.createdevelopment.house.service.publicfacility.PublicFacilityServiceImpl">		
+		<property name="publicFacilityDao" ref="publicFacilityDao" />
+	</bean>
+	
 	
 </beans>

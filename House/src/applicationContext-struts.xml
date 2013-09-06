@@ -25,4 +25,8 @@
     <bean id="pictureAction" class="com.createdevelopment.house.action.PictureAction" scope="prototype" parent="baseAction">
        <property name="pictureService" ref="pictureService" />       	    
 	</bean>
+	
+	 <bean id="publicFacilityAction" class="com.createdevelopment.house.action.PublicFacilityAction" scope="prototype" parent="baseAction">
+       <property name="publicFacilityService" ref="publicFacilityService" />       	    
+	</bean>
 </beans>

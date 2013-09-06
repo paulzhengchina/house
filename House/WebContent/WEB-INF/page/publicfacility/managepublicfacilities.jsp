@@ -50,13 +50,6 @@
 					</ul>
 				</li>	
 				<li class="submenu">
-					<a href="#"><i class="icon icon-file"></i> <span>户型管理</span> <span class="label">2</span></a>
-					<ul>
-						<li><a href="invoice.html">户型列表</a></li>
-						<li><a href="chat.html">新增户型</a></li>
-					</ul>
-				</li>
-				<li class="submenu">
 					<a href="#"><i class="icon icon-file"></i> <span>公共资源管理管理</span> <span class="label">2</span></a>
 					<ul>
 						<li><a href="invoice.html">公共资源列表</a></li>
@@ -98,6 +91,7 @@
 											<th>名称</th>
 											<th>位置</th>
 											<th>均价</th>
+											<th>维护</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -107,6 +101,17 @@
 												<td><s:property value="name"/></td>
 												<td><s:property value="address"/></td>
 												<td>￥<s:property value="average_price"/></td>
+												<td>
+													<button class="btn btn-primary btn-mini">基本信息</button>
+													<a href='<s:url value="/roomtype/gotomanageroomtype.action"><s:param name="belongedHouseId" value="id"/></s:url>' >
+													  <button class="btn btn-primary btn-mini" id="roomtype">户型</button>
+													</a>
+													<a href='<s:url value="/picture/gotomanagepictures.action"><s:param name="ownerId" value="id"/></s:url>' >
+													  <button class="btn btn-primary btn-mini" id="roomtype">图片</button>
+													</a>
+													<button class="btn btn-primary btn-mini">周边</button>
+													
+												</td>
 										</tr>
 		                                </s:iterator>
 										
