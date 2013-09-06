@@ -2,8 +2,10 @@ package com.createdevelopment.house.service.picture;
 
 import java.io.File;
 import java.util.Date;
+import java.util.List;
 
 import com.createdevelopment.house.dao.picture.PictureDao;
+import com.createdevelopment.house.entity.House;
 import com.createdevelopment.house.entity.Picture;
 import com.createdevelopment.house.util.FileUtil;
 
@@ -53,6 +55,12 @@ public class PictureServiceImpl implements PictureService{
 		return null;
 	//	pictureDao.savePicture(picture);
 	}
+	
+	@Override
+	public List<Picture> findPicturesForOwner(String ownerId) {
+		// TODO Auto-generated method stub
+		return pictureDao.getPicturesForObject(ownerId);
+	}
 
 	public PictureDao getPictureDao() {
 		return pictureDao;
@@ -62,5 +70,6 @@ public class PictureServiceImpl implements PictureService{
 		this.pictureDao = pictureDao;
 	}
 
+	
     
 }

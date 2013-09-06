@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="picture" extends="struts-default" namespace="/picture">
+	    
+	    <action name="gotomanagepictures" class="pictureAction" method="gotomanagepictures">
+			<result name="success">/WEB-INF/page/picture/managepictures.jsp</result>
+		</action>
+		
+		<action name="savePicture" class="pictureAction" method="savePicture">
+			<result name="success" type="redirect">gotomanagepictures.action?ownerId=%{picture.ownerId}</result>
+		</action>	                 		
+		
+		
+	</package>
+</struts>	

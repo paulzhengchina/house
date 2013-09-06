@@ -15,13 +15,15 @@ public class HouseAction extends BaseAction {
 	PictureService pictureService;
 	House house;
     private File logo;
-    private String logoContentType;
 	private String logoFileName;
     private File over_view;
     private String over_viewContentType;
 	private String over_viewFileName;
 	private String realPathString;
-	private String testString;
+	private List<Picture> picturesOfHouse;
+	private String houseId;
+
+	
 	
 	public String showAllHouses(){
 		houses=houseService.getAllHouses();
@@ -45,6 +47,7 @@ public class HouseAction extends BaseAction {
     	houseService.saveHouse(house);
     	return SUCCESS;
     }
+    
     
     /*
      * set and get methods start from here
@@ -77,15 +80,6 @@ public class HouseAction extends BaseAction {
 
 	public void setLogo(File logo) {
 		this.logo = logo;
-	}
-
-
-	public String getLogoContentType() {
-		return logoContentType;
-	}
-
-	public void setLogoContentType(String logoContentType) {
-		this.logoContentType = logoContentType;
 	}
 
 	public String getLogoFileName() {
@@ -128,12 +122,28 @@ public class HouseAction extends BaseAction {
 		this.over_viewFileName = lover_viewFileName;
 	}
 
-	public String getTestString() {
-		return testString;
+	public String getOver_viewFileName() {
+		return over_viewFileName;
 	}
 
-	public void setTestString(String testString) {
-		this.testString = testString;
+	public void setOver_viewFileName(String over_viewFileName) {
+		this.over_viewFileName = over_viewFileName;
+	}
+
+	public List<Picture> getPicturesOfHouse() {
+		return picturesOfHouse;
+	}
+
+	public void setPicturesOfHouse(List<Picture> picturesOfHouse) {
+		this.picturesOfHouse = picturesOfHouse;
+	}
+
+	public String getHouseId() {
+		return houseId;
+	}
+
+	public void setHouseId(String houseId) {
+		this.houseId = houseId;
 	}
 	
     

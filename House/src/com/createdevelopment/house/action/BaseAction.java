@@ -28,11 +28,12 @@ public class BaseAction extends ActionSupport implements MethodInterceptor{
 	/*
 	 * add some usefully method here to facility the development
 	 */
-	
+	 
 	 static Logger logger = Logger.getLogger(BaseAction.class.getName());
 	 public int currentPage; 
 	// public Pager pager;
 	 public final static String USER="CRNTUSER";
+	 public final static String ROOMCATEGORYTITLE="户型";
      private static int BUFFER_SIZE=16*1024;
      
      public HttpServletRequest getRequest(){

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="roomtype" extends="struts-default" namespace="/roomtype">
+	    
+	    
+	    <action name="gotomanageroomtype" class="roomTypeAction" method="loadManageRoomType">
+			<result name="success">/WEB-INF/page/roomtype/manageroomtypes.jsp</result>
+		</action>	                 		
+		<action name="manageroomtype" class="roomTypeAction" method="obtainAllRoomTypesForHouse">
+			<result name="success">/WEB-INF/page/roomtype/manageroomtypes.jsp</result>
+		</action>
+		<action name="saveroomtype" class="roomTypeAction" method="saveRoomType">
+			<result name="success" type="redirect">gotomanageroomtype.action?belongedHouseId=%{belongedHouseId}</result>
+		</action>
+		
+	</package>
+</struts>	

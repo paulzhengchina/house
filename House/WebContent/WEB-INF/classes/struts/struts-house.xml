@@ -11,10 +11,13 @@
 			<result name="success" type="redirect">showAllHouses.action</result>
 		</action>	                 		
 		<action name="showAllHouses" class="houseAction" method="showAllHouses">
-			<result name="success">/WEB-INF/page/house/showAllHousesForAdmin.jsp</result>
+			<result name="success">/WEB-INF/page/house/managehouses.jsp</result>
 		</action>
 		<action name="showAddHouse" class="houseAction" method="showAddHouse">
 			<result name="success">/WEB-INF/page/house/showAddHouse.jsp</result>
+		</action>
+		<action name="gotomanagepictures" class="houseAction" method="loadPictures">
+			<result name="success">/WEB-INF/page/house/managepictures.jsp</result>
 		</action>
 		
 		

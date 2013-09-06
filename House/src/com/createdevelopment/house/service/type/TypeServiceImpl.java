@@ -42,6 +42,13 @@ public class TypeServiceImpl implements TypeService {
 		}
 		
 	}
+
+	@Override
+	public List<TypeValue> obtainTypeValuesByName(String typeName) {
+		// TODO Auto-generated method stub
+		return typeDao.obtainTypeValuesByName(typeName);
+	}
+
     
     
 }

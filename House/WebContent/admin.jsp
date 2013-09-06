@@ -74,7 +74,7 @@
 			
 				<div class="row-fluid">
 					<div id="footer" class="span12">
-						2013 &copy; 创展科技</a>
+						2013 &copy; 苏州创展科技</a>
 					</div>
 				</div>
 			</div>
