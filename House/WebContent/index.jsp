@@ -329,7 +329,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="span3 annoucement-area">广告位</div>
+								<div class="span3 annoucement-area">广告位zhi</div>
 							</div>
 						</div>
 					</div>
